@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node server",
-    "dev": "node --watch server"
+    "build-frontend": "cd ../frontend && npm install && npm run build",
+    "start": "npm install && npm run build-frontend && node server.js"
   },
   "keywords": [],
   "author": "",

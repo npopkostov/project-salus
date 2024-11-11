@@ -19,9 +19,7 @@ const __dirname = path.dirname(__filename);
 app.use(bodyParser.json());
 
 // Serve static files from the React app
-app.use(
-  express.static(path.join(__dirname, "../NodeJs Express Backend for Events/react-mvr/dist"))
-);
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 // Auth routes
 app.use("/auth", authRouter);
@@ -31,11 +29,7 @@ app.use("/data", dataRouter);
 
 // Handle any requests that don't match the above routes
 app.get("*", (req, res) => {
-  const filePath = path.join(
-    __dirname,
-    "../NodeJs Express Backend for Events/react-mvr/dist",
-    "index.html"
-  );
+  const filePath = path.join(__dirname, "../frontend/dist", "index.html");
   res.sendFile(filePath, (err) => {
     if (err) {
       console.log("Error sending file", err);
