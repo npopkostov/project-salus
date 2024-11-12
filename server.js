@@ -18,10 +18,10 @@ const __dirname = path.dirname(__filename);
 // Middleware
 app.use(bodyParser.json());
 
-// Serve static files from the React app
-app.use(
-  express.static(path.join(__dirname, "../NodeJs Express Backend for Events/react-mvr/dist"))
-);
+// // Serve static files from the React app
+// app.use(
+//   express.static(path.join(__dirname, "../NodeJs Express Backend for Events/react-mvr/dist"))
+// );
 
 // Auth routes
 app.use("/auth", authRouter);
@@ -29,22 +29,22 @@ app.use("/auth", authRouter);
 // Data routes
 app.use("/data", dataRouter);
 
-// Handle any requests that don't match the above routes
-app.get("*", (req, res) => {
-  const filePath = path.join(
-    __dirname,
-    "../NodeJs Express Backend for Events/react-mvr/dist",
-    "index.html"
-  );
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.log("Error sending file", err);
-      res.status(err.status).end();
-    } else {
-      console.log("Serving file from:", filePath);
-    }
-  });
-});
+// // Handle any requests that don't match the above routes
+// app.get("*", (req, res) => {
+//   const filePath = path.join(
+//     __dirname,
+//     "../NodeJs Express Backend for Events/react-mvr/dist",
+//     "index.html"
+//   );
+//   res.sendFile(filePath, (err) => {
+//     if (err) {
+//       console.log("Error sending file", err);
+//       res.status(err.status).end();
+//     } else {
+//       console.log("Serving file from:", filePath);
+//     }
+//   });
+// });
 
 async function startServer() {
   try {
