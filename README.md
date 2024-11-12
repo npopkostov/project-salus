@@ -101,9 +101,6 @@ This will help users understand how safe or unsafe different areas of Macedonia 
 
 - **Role-Based Access Control**: Based on the user role (Admin or Member), different parts of the application are accessible. Admins have full access, while Members have restricted access.
 
-## **Database**
-
-- **MongoDB** is used for storing user information, events, and other critical data. The application utilizes **Mongoose** to interact with the MongoDB database, and it ensures data is validated and organized efficiently.
 
 ### **Backend**
 
