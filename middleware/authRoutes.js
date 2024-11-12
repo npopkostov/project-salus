@@ -39,7 +39,7 @@ authRouter.post("/register", async (req, res) => {
 
     await usersCollection.insertOne(user);
 
-    const verificationLink = `http://localhost:2000/auth/verify/${username}`;
+    const verificationLink = `https://project-salus.netlify.app/auth/verify/${username}`;
 
     await mailService("newUser", email, verificationLink, verificationCode);
 
@@ -99,7 +99,7 @@ authRouter.post("/forgot-password", async (req, res) => {
       return res.status(400).json({ message: "User not found" });
     }
     if (user.email === email) {
-      const passwordResetLink = `http://localhost:2000/auth/password-reset/${user.username}`;
+      const passwordResetLink = `https://project-salus.netlify.app/auth/password-reset/${user.username}`;
       mailService("passwordReset", email, passwordResetLink);
       return res.status(200).json({ message: "Password reset requested, check your email." });
     }
