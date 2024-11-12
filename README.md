@@ -166,7 +166,7 @@ You can use these credentials to log in and access different sections of the app
 
 You can view the live version of the project by clicking the link below:
 
-[Visit Project](https://your-hosted-project-link.com)
+[Visit Project](https://project-salus.netlify.app/auth/login)
 
 ## **Contact Information**
 
