@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 import Navbar from "../components/Navbar";
 import Toolbar from "../components/Toolbar";
 import { AppContext } from "../../context/AppContext";
-import toolBox from "../assets/toolBox.png";
+import toolBox from "../assets/toolbox.png";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
