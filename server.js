@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 import { connectToMongoDB, client } from "./middleware/connectToMongoDB.js";
 import authRouter from "./middleware/authRoutes.js";
 import dataRouter from "./middleware/dataRoutes.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -14,6 +15,14 @@ const app = express();
 const PORT = process.env.PORT || 2000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const corsOptions = {
+  origin: "https://project-salus.netlify.app", // Frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
 
 // Middleware
 app.use(bodyParser.json());
