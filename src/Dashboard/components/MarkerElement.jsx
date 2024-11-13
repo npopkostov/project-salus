@@ -158,8 +158,8 @@ const MarkerElement = ({ sample }) => {
           <Popup>
             <div className=" rounded-md space-y-2">
               <div className="flex space-x-2">
-                <div className="">Felony: {sample.felony}</div>
-                <FontAwesomeIcon className="h-4" icon={icon} />
+                <div className="font-bold">Felony: {sample.felony}</div>
+                {/* <FontAwesomeIcon className="h-4" icon={icon} /> */}
               </div>
               <div className="flex space-x-2">
                 <FontAwesomeIcon className="h-4" icon={faBuilding} />
