@@ -146,7 +146,7 @@ This will help users understand how safe or unsafe different areas of Macedonia 
 
 4: Login with Example Accounts
 
-To test the login functionality, use the following example accounts:
+To login into the app use the following example accounts:
 
 - **Admin Account**
 
