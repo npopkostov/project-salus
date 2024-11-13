@@ -6,8 +6,8 @@ import { findFelony } from "./middleware/findFelony.js";
 import { findWeather } from "./middleware/findWeather.js";
 import { uploadDB } from "./mongoDB/updateDB.js";
 
-let linkIndex = 3521;
-let maxIndex = 3522;
+let linkIndex = 3522;
+let maxIndex = 3523;
 
 const scrape = async () => {
   const browser = await puppeteer.launch();

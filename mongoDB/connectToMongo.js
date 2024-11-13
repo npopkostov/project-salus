@@ -1,6 +1,7 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
-const uri =
-  "mongodb+srv://mongo1:mongo1@cluster1.x3hdt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1";
+
+// The uri is deleted because it will interfere with the current database
+const uri = "deleted on purpose";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
