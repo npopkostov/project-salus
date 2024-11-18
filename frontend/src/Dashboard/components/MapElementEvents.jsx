@@ -65,8 +65,9 @@ const MapElementEvents = ({ data }) => {
 
   useEffect(() => {
     if (data) {
-      const latestDate = new Date(dashboardHome.eventsObj.latestDate);
-      setMaxDate(latestDate.toLocaleDateString("en-GB"));
+      const [day, month, year] = dashboardHome.eventsObj.latestDate.split("/");
+      const latestDate = new Date(`${year}-${month}-${day}`);
+      setMaxDate(latestDate);
       setLoading(false);
     }
   }, [data]);
