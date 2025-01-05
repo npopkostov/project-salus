@@ -28,6 +28,7 @@ dataRouter.get("/dashboard/home", async (req, res) => {
       events2022: null,
       events2023: null,
       events2024: null,
+      events2025: null,
     },
     avgScore: null,
     reports: null,
@@ -60,7 +61,7 @@ dataRouter.get("/dashboard/home", async (req, res) => {
     // Defining star year
     const startYear = 2015;
     // Defining current year // this will have to be updated
-    const endYear = 2024;
+    const endYear = 2025;
     // Defining current date
     const currentDate = new Date();
     // Defining current year
@@ -74,12 +75,12 @@ dataRouter.get("/dashboard/home", async (req, res) => {
     // Dfining previous date string
     const previousDateString = previousDate.toISOString().split("T")[0];
 
-    // Loop through years starging from 2015 to 2024
+    // Loop through years starging from 2015 to 2025
     for (let year = startYear; year <= endYear; year++) {
       let startDate = `${year}-01-01`;
       let endDate = `${year}-12-31`;
 
-      // If year is 2024 query until current date
+      // If year is 2025 query until current date
       if (year === 2024) {
         endDate = todayDateString;
         dataObj.year[`events${year}`] = await eventsCollection.countDocuments({
