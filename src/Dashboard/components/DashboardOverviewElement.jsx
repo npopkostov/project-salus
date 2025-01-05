@@ -38,6 +38,7 @@ const DashboardOverviewElement = ({ events }) => {
           { category: "2022", events: events.year.events2022 },
           { category: "2023", events: events.year.events2023 },
           { category: "2024", events: events.year.events2024 },
+          { category: "2025", events: events.year.events2025 },
         ];
         setTotalEvents(events.total + events.notLocated);
         setTotalEventsData(eventsObj);
